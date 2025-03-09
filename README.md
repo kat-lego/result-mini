@@ -1,6 +1,6 @@
 # ResultMini NuGet Package
 
-`ResultMini` is a C# library that introduces a `Result<T>` struct designed to represent a result that can either contain a value of type `T` or a collection of errors. This is useful for scenarios where operations might fail and you need to capture errors along with the successful result.
+`ResultMini` is a C# package that introduces a `Result<T>` struct designed to represent a result that can either contain a value of type `T` or a collection of errors. This is useful for scenarios where operations might fail and you need to capture errors along with the successful result.
 
 ## Installation
 
