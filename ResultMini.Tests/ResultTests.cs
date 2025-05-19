@@ -57,18 +57,4 @@ public class ResultTests
         Assert.Equal(expectedData, data);
         Assert.Empty(errors);
     }
-
-    [Fact]
-    public void Initializing_FromEmptyArray_ShouldThrowException()
-    {
-        // Arrange
-        var expectedErrors = new Error[] { };
-
-        // Act & Assert
-        Assert.Throws<ResultEmptyErrorsInitiationException>(() =>
-        {
-            Result<int> result = expectedErrors;
-        });
-    }
-
 }

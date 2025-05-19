@@ -27,9 +27,6 @@ public struct Result<T>
     /// <param name="errors">The collection of errors.</param>
     private Result(IEnumerable<Error> errors)
     {
-        if (!errors.Any())
-            throw new ResultEmptyErrorsInitiationException();
-
         _errors = errors;
         _data = default;
     }
