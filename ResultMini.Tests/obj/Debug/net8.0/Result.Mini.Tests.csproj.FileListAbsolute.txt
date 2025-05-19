@@ -1,5 +1,0 @@
-/home/katlego/source/result-mini/Result.Mini.Tests/obj/Debug/net8.0/Result.Mini.Tests.csproj.AssemblyReference.cache
-/home/katlego/source/result-mini/Result.Mini.Tests/obj/Debug/net8.0/Result.Mini.Tests.GeneratedMSBuildEditorConfig.editorconfig
-/home/katlego/source/result-mini/Result.Mini.Tests/obj/Debug/net8.0/Result.Mini.Tests.AssemblyInfoInputs.cache
-/home/katlego/source/result-mini/Result.Mini.Tests/obj/Debug/net8.0/Result.Mini.Tests.AssemblyInfo.cs
-/home/katlego/source/result-mini/Result.Mini.Tests/obj/Debug/net8.0/Result.Mini.Tests.csproj.CoreCompileInputs.cache
