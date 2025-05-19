@@ -1,6 +1,4 @@
-﻿using ResultMini.Exceptions;
-
-namespace ResultMini;
+﻿namespace ResultMini;
 
 /// <summary>
 /// Represents a result that can either contain a value of type <typeparamref name="T"/> 
@@ -71,13 +69,6 @@ public struct Result<T>
     /// <summary>
     /// Deconstructs the <see cref="Result{T}"/> into its value and errors.
     /// </summary>
-    /// <param name="res">The result to deconstruct.</param>
-    /// <returns>A tuple containing the value and the errors.</returns>
-    public static implicit operator (T?, IEnumerable<Error>)(Result<T> res)
-    {
-        return (res._data, res._errors);
-    }
-
     public void Deconstruct(out T? data, out IEnumerable<Error> errors)
     {
         data = _data;
