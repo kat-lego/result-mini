@@ -1,6 +1,4 @@
-﻿using ResultMini.Exceptions;
-
-namespace ResultMini.Tests;
+﻿namespace ResultMini.Tests;
 
 public class ResultTests
 {
@@ -9,52 +7,52 @@ public class ResultTests
     public void ImplicitConversion_FromError_ShouldCreateResultWithSingleError()
     {
         // Arrange
-        var expectedError = new Error(1, "Test Error");
+        var expected = new Error(1, "Test Error");
 
         // Act
-        Result<int> result = expectedError;
+        Result<int> result = expected;
 
         // Assert
         var (data, errors) = result;
 
-        Assert.Equal(data, default);
-        Assert.Equal(errors.Count(), 1);
-        Assert.Equivalent(errors.FirstOrDefault(), expectedError);
+        Assert.Equal(default, data);
+        Assert.Single(errors);
+        Assert.Equivalent(expected, errors.FirstOrDefault());
     }
 
     [Fact]
     public void ImplicitConversion_FromErrorArray_ShouldCreateResultWithErrors()
     {
         // Arrange
-        var expectedErrors = new[]
+        var expected = new[]
         {
             new Error(1, "Error 1"),
             new Error(2, "Error 2")
         };
 
         // Act
-        Result<int> result = expectedErrors;
+        Result<int> result = expected;
 
         // Assert
         var (data, errors) = result;
 
-        Assert.Equal(data, default);
-        Assert.Equal(errors.Count(), 2);
-        Assert.Equivalent(errors, expectedErrors);
+        Assert.Equal(default, data);
+        Assert.Equal(2, errors.Count());
+        Assert.Equivalent(expected, errors);
     }
 
     [Fact]
     public void Deconstruction_ShouldReturnDataAndErrors()
     {
         // Arrange
-        var expectedData = 100;
-        Result<int> result = expectedData;
+        var expected = 100;
+        Result<int> result = expected;
 
         // Act
         var (data, errors) = result;
 
         // Assert
-        Assert.Equal(expectedData, data);
+        Assert.Equal(expected, data);
         Assert.Empty(errors);
     }
 }
