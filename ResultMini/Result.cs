@@ -8,7 +8,7 @@
 public struct Result<T>
 {
     private readonly T? _data;
-    private readonly IEnumerable<Error> _errors = [];
+    private readonly IEnumerable<Error>? _errors = null;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Result{T}"/> class with a value.
@@ -69,7 +69,7 @@ public struct Result<T>
     /// <summary>
     /// Deconstructs the <see cref="Result{T}"/> into its value and errors.
     /// </summary>
-    public void Deconstruct(out T? data, out IEnumerable<Error> errors)
+    public void Deconstruct(out T? data, out IEnumerable<Error>? errors)
     {
         data = _data;
         errors = _errors;

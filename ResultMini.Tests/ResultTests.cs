@@ -16,8 +16,8 @@ public class ResultTests
         var (data, errors) = result;
 
         Assert.Equal(default, data);
-        Assert.Single(errors);
-        Assert.Equivalent(expected, errors.FirstOrDefault());
+        Assert.Single(errors!);
+        Assert.Equivalent(expected, errors?.FirstOrDefault());
     }
 
     [Fact]
@@ -37,7 +37,7 @@ public class ResultTests
         var (data, errors) = result;
 
         Assert.Equal(default, data);
-        Assert.Equal(2, errors.Count());
+        Assert.Equal(2, errors?.Count());
         Assert.Equivalent(expected, errors);
     }
 
@@ -53,6 +53,6 @@ public class ResultTests
 
         // Assert
         Assert.Equal(expected, data);
-        Assert.Empty(errors);
+        Assert.Null(errors);
     }
 }
